@@ -3,6 +3,7 @@ import "./App.css";
 import router from "./Utlities/Routes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./Components/Header/Header";
 // import { toast } from "react-toastify";
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
   //   toast.success("wow so ease!", { autoClose: 1000 });
   // };
   return (
-    <div className="App">
-      <ToastContainer position="top-center" />;
+    <div>
+      <ToastContainer position="top-center" />
       <RouterProvider router={router} />
       {/* <div>
         <h1>rajib</h1>
