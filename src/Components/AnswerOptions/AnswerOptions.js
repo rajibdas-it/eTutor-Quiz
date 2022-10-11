@@ -1,16 +1,19 @@
 import { Label, Radio } from 'flowbite-react';
 import React from 'react';
 
-const AnswerOptions = () => {
+const AnswerOptions = ({ option, qs }) => {
+    // console.log(qs);
+    const { id, question, correctAnswer, options } = qs;
     return (
-        <div className="flex items-center gap-2 border border-gray-700 p-5 rounded-md">
+        // border border - gray - 700 rounded - md
+        <div className="flex items-center gap-2">
             <Radio
-                id="united-state"
-                name="countries"
-                value="USA"
+                id={id}
+                name={question}
+                value={option}
             />
-            <Label htmlFor="united-state">
-                United States
+            <Label htmlFor={id}>
+                {option}
             </Label>
         </div>
     );

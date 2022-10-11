@@ -5,7 +5,9 @@ import QuizDetails from '../QuizDetails/QuizDetails';
 const Quiz = () => {
     const { data } = useLoaderData()
     const { name, questions } = data
-    console.log(questions);
+    // console.log(questions);
+
+
     return (
         <div>
             {/* quiz title sections */}
@@ -18,7 +20,7 @@ const Quiz = () => {
                 <div className='w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4'>
                     <div className='border border-red-400 md:col-span-2'>
                         {
-                            questions.map(qs => <QuizDetails key={qs.id} qs={qs}></QuizDetails>)
+                            questions.map((qs, index) => <QuizDetails key={qs.id} index={index} qs={qs}></QuizDetails>)
                         }
                     </div>
                     <div className='text-start border border-lime-400'>
