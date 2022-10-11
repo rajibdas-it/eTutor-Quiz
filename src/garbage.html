@@ -1,46 +1,75 @@
 <nav className="navbar navbar-expand-lg container">
-    <div className="container">
-      <Link className="navbar-brand fw-bold" to="/home">
-        e<span className="text-info">Tutor</span>
-      </Link>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-4">
-          <li className="nav-item">
-            <NavLink
-              className="nav-link text-info"
-              aria-current="page"
-              to="/home"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/quiz">
-              Quiz
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/blog">
-              Blog
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/statistics">
-              Statistics
-            </NavLink>
-          </li>
-        </ul>
+  <div className="container">
+    <Link className="navbar-brand fw-bold" to="/home">
+    e<span className="text-info">Tutor</span>
+    </Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-4">
+        <li className="nav-item">
+          <NavLink className="nav-link text-info" aria-current="page" to="/home">
+            Home
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/quiz">
+            Quiz
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/blog">
+            Blog
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/statistics">
+            Statistics
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- banner -->
+{/* banner section */}
+<section>
+  <div className="relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
+    <div className="max-w-xl mx-auto lg:max-w-screen-xl">
+      <div className="mb-16 lg:max-w-lg lg:mb-0">
+        <div className="max-w-xl mb-6">
+
+          <h2
+            className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            EDUCATION SOLUTIONS
+          </h2>
+          <p className="text-base text-gray-700 md:text-lg">
+            Do different today and every day.
+          </p>
+        </div>
+        <div className="flex items-center">
+          <Link to="/"
+            className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-500 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+          Get started
+          </Link>
+          <Link href="/" aria-label=""
+            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
+          Learn more
+          </Link>
+        </div>
       </div>
     </div>
-  </nav>
+    <div
+      className="flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end">
+      <img src="https://kitwind.io/assets/kometa/full-browser.png"
+        className="mt-10 object-cover object-top w-full h-64 max-w-xl -mb-16 rounded shadow-2xl lg:ml-64 xl:ml-8 lg:-mb-24 xl:-mb-28 lg:h-auto lg:max-w-screen-md"
+        alt="" />
+    </div>
+  </div>
+</section>
+{/* Quiz section */}
+<section></section>

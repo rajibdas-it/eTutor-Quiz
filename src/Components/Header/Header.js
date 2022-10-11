@@ -16,10 +16,18 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/quiz">Quiz</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/statistics">Statistics</NavLink>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/quiz">Quiz</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blog">Blog</NavLink>
+          </li>
+          <li>
+            <NavLink to="/statistics">Statistics</NavLink>
+          </li>
         </Navbar.Collapse>
       </Navbar>
     </div>
