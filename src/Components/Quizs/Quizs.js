@@ -3,18 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Quizs = ({ quiz }) => {
-  const { id, logo, name, total } = quiz
+  const { id, logo, name, total } = quiz;
   return (
     <div className="max-w-sm mt-20">
-      <Card
-        imgAlt="Apple Watch Series 7 in colors pink, silver, and black"
-        imgSrc={logo}
-      >
-        <a href="/">
+      <Card>
+        <div className="bg-gray-400 rounded-md">
+          <img src={logo} alt="" />
+        </div>
+        <Link to={`/quiz/${id}`}>
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
             {name}
           </h5>
-        </a>
+        </Link>
         <div className="mt-2.5 mb-5 flex items-center">
           <h1>No of Quiz:</h1>
           <span className="mr-2 ml-3 rounded bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-800 dark:bg-blue-200 dark:text-blue-800">
