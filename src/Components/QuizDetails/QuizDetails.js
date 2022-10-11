@@ -1,14 +1,17 @@
 import { Card } from 'flowbite-react';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import AnswerOptions from '../AnswerOptions/AnswerOptions';
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2'
+import { RightAnswerContext, WrongAnswerContext } from '../layout/Main';
 
 const QuizDetails = ({ qs, index }) => {
     // console.log(qs);
-    const [rightAns, setRightAns] = useState(0)
-    const [wrongAns, setWrongAns] = useState(0)
+    // let [rightAns, setRightAns] = useState(0)
+    // let [wrongAns, setWrongAns] = useState(0)
+    let [rightAns, setRightAns] = useContext(RightAnswerContext)
+    let [wrongAns, setWrongAns] = useContext(WrongAnswerContext)
 
     const { id, question, correctAnswer, options } = qs;
 
@@ -19,14 +22,17 @@ const QuizDetails = ({ qs, index }) => {
 
     const handleQuestionAnswer = (ans) => {
         if (ans === correctAnswer) {
-            setRightAns(rightAns + 1)
+            rightAns = rightAns + 1
+            setRightAns(rightAns)
             toast.success("Right Answer", { autoClose: 500 })
-
         } else {
-            setWrongAns(rightAns + 1)
+            wrongAns = wrongAns + 1
+            setWrongAns(wrongAns)
             toast.error("Wrong Answer", { autoClose: 500 })
         }
     }
+    console.log(rightAns);
+    console.log(wrongAns);
 
     return (
 

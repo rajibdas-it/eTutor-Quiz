@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { RightAnswerContext, WrongAnswerContext } from '../layout/Main';
 import QuizDetails from '../QuizDetails/QuizDetails';
 
 const Quiz = () => {
     const { data } = useLoaderData()
     const { name, questions } = data
     // console.log(questions);
+
+    let [rightAns, setRightAns] = useContext(RightAnswerContext)
+    let [wrongAns, setWrongAns] = useContext(WrongAnswerContext)
 
 
     return (
@@ -24,13 +28,13 @@ const Quiz = () => {
                         }
                     </div>
                     <div className='text-start border border-lime-400'>
-                        <div>
-                            <h1 className='mt-5 text-center text-4xl font-bold text-blue-400 italic mb-2'>Result</h1>
-                            <hr className='bg-black w-[80%] mx-auto' />
+                        <div className='sticky top-0'>
+                            <h1 className='mt-5 text-center text-4xl font-bold text-blue-400 italic mb-2'>Real Time Result Board</h1>
+                            <hr className='bg-black w-[85%] mx-auto' />
                         </div>
-                        <div className='mt-5 ml-6 mb-3'>
-                            <p>Right Ans: 8</p>
-                            <p>Wrong Ans: 1</p>
+                        <div className='mt-5 ml-6 mb-3 sticky top-16'>
+                            <p>Right Ans: {rightAns}</p>
+                            <p>Wrong Ans: {wrongAns}</p>
                         </div>
                     </div>
                 </div>
