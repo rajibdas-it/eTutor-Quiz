@@ -1,147 +1,93 @@
+import { Accordion } from "flowbite-react";
 import React from "react";
 
 const Blog = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
-        <div className="p-8 bg-white border rounded shadow-sm">
-          <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-            <a
-              href="/"
-              className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              aria-label="Category"
-            >
-              weekend
-            </a>{' '}
-            <span className="text-gray-600">— 1 Feb 2020</span>
-          </p>
-          <a
-            href="/"
-            aria-label="Article"
-            title="Jingle Bells"
-            className="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
-          >
-            Jingle Bells
-          </a>
-          <p className="mb-5 text-gray-700">
-            Some pilots get picked and become television programs. Some don't,
-            become nothing.
-          </p>
-          <div className="flex items-center">
-            <a href="/" aria-label="Author" title="Author" className="mr-3">
-              <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt="avatar"
-                className="object-cover w-10 h-10 rounded-full shadow-sm"
-              />
-            </a>
-            <div>
-              <a
-                href="/"
-                aria-label="Author"
-                title="Author"
-                className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                Vasile Melinte
-              </a>
-              <p className="text-sm font-medium leading-4 text-gray-600">
-                Author
+    <div className=" w-[80%] mx-auto mt-10 text-center">
+      <div>
+        <h1 className="text-3xl lg:text-4xl font-bold text-blue-400">
+          Frequently Asked Questions
+        </h1>
+        <p className="mt-3 text-gray-500">
+          As a student, you will find it helpful for better concentration and
+          memory
+        </p>
+      </div>
+      <div className="mt-5">
+        <Accordion alwaysOpen={true}>
+          <Accordion.Panel>
+            <Accordion.Title>
+              <p className="text-blue-500">
+                What is the purpose of React Router?
               </p>
-            </div>
-          </div>
-        </div>
-        <div className="p-8 bg-white border rounded shadow-sm">
-          <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-            <a
-              href="/"
-              className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              aria-label="Category"
-            >
-              holidays
-            </a>{' '}
-            <span className="text-gray-600">— 15 Nov 2020</span>
-          </p>
-          <a
-            href="/"
-            aria-label="Article"
-            title="Happy new Year"
-            className="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
-          >
-            Happy new Year
-          </a>
-          <p className="mb-5 text-gray-700">
-            Pommy ipsum smeg head whizz morris dancers come hither, bugger
-            codswallop gob. Taking the mick middle class bog.
-          </p>
-          <div className="flex items-center">
-            <a href="/" aria-label="Author" title="Author" className="mr-3">
-              <img
-                src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt="avatar"
-                className="object-cover w-10 h-10 rounded-full shadow-sm"
-              />
-            </a>
-            <div>
-              <a
-                href="/"
-                aria-label="Author"
-                title="Author"
-                className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                John Doe
-              </a>
-              <p className="text-sm font-medium leading-4 text-gray-600">
-                Author
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                <span className="text-gray-800 font-bold text-lg">
+                  React Router
+                </span>{" "}
+                is a standard library for routing in React. It enables the
+                navigation among views of various components in a React
+                Application, allows changing the browser URL, and keeps the UI
+                in sync with the URL. React Router, and dynamic, client-side
+                routing, allows us to build a single-page web application with
+                navigation without the page refreshing as the user navigates.
+                React Router uses component structure to call components, which
+                display the appropriate information. By preventing a page
+                refresh, and using Router or Link, which is explained in more
+                depth below, the flash of a white screen or blank page is
+                prevented. This is one increasingly common way of having a more
+                seamless user experience.
               </p>
-            </div>
-          </div>
-        </div>
-        <div className="p-8 bg-white border rounded shadow-sm">
-          <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-            <a
-              href="/"
-              className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              aria-label="Category"
-            >
-              programming
-            </a>{' '}
-            <span className="text-gray-600">— 28 Dec 2020</span>
-          </p>
-          <a
-            href="/"
-            aria-label="Article"
-            title="Why i love C++"
-            className="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
-          >
-            Why i love C++
-          </a>
-          <p className="mb-5 text-gray-700">
-            Sportacus andrew weatherall goose Refined gentlemen super mario des
-            lynam alpha trion zap rowsdower.
-          </p>
-          <div className="flex items-center">
-            <a href="/" aria-label="Author" title="Author" className="mr-3">
-              <img
-                src="https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-                alt="avatar"
-                className="object-cover w-10 h-10 rounded-full shadow-sm"
-              />
-            </a>
-            <div>
-              <a
-                href="/"
-                aria-label="Author"
-                title="Author"
-                className="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400"
-              >
-                Andrew Larkin
-              </a>
-              <p className="text-sm font-medium leading-4 text-gray-600">
-                Author
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title>
+              <p className="text-blue-500">How Does Context API Works?</p>
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                The{" "}
+                <span className="text-gray-800 font-bold text-lg">
+                  React Context API
+                </span>{" "}
+                is a way for a React app to effectively produce global variables
+                that can be passed around. This is the alternative to "prop
+                drilling" or moving props from grandparent to child to parent,
+                and so on. Context is also touted as an easier, lighter approach
+                to state management using Redux. Context API is a (kind of) new
+                feature added in version 16.3 of React that allows one to share
+                state across the entire app (or part of it) lightly and with
+                ease. React.createContext() is all you need. It returns a
+                consumer and a provider. Provider is a component that as it's
+                names suggests provides the state to its children. It will hold
+                the "store" and be the parent of all the components that might
+                need that store. Consumer as it so happens is a component that
+                consumes and uses the state.
               </p>
-            </div>
-          </div>
-        </div>
+            </Accordion.Content>
+          </Accordion.Panel>
+          <Accordion.Panel>
+            <Accordion.Title>
+              <p className="text-blue-500">What is useRef?</p>
+            </Accordion.Title>
+            <Accordion.Content>
+              <p className="mb-2 text-gray-500 dark:text-gray-400">
+                The{" "}
+                <span className="text-gray-800 font-bold text-lg">useRef </span>
+                useRef Hook allows you to persist values between renders. useRef
+                is like a “box” that can hold a mutable value in its current
+                property. It can be used to store a mutable value that does not
+                cause a re-render when updated. useRef creates a plain
+                JavaScript object. It can be used to access a DOM element
+                directly. When we need to send value or child component we can
+                use forwardRef. useRef doesn't notify you when its content
+                changes. Mutating the .current property doesn't cause a
+                re-render.
+              </p>
+            </Accordion.Content>
+          </Accordion.Panel>
+        </Accordion>
       </div>
     </div>
   );

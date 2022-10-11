@@ -5,22 +5,27 @@ import Home from "../Components/Home/Home";
 import Main from "../Components/layout/Main";
 import Quiz from "../Components/Quiz/Quiz";
 import Statistics from "../Components/Statistics/Statistics";
+import Topics from "../Components/Topics/Topics";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
     errorElement: <ErrorTemplate />,
-    loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+    loader: () => fetch("https://openapi.programming-hero.com/api/quiz"),
     children: [
       { path: "/", element: <Home /> },
       { path: "/home", element: <Home /> },
+      { path: "/topics", element: <Topics /> },
       { path: "/blog", element: <Blog /> },
       { path: "/statistics", element: <Statistics /> },
       {
-        path: '/quiz/:quizId',
+        path: "/quiz/:quizId",
         element: <Quiz></Quiz>,
-        loader: ({ params }) => fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+        loader: ({ params }) =>
+          fetch(
+            `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+          ),
       },
     ],
   },

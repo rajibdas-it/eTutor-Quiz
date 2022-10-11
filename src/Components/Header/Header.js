@@ -3,21 +3,23 @@ import { Link, NavLink } from "react-router-dom";
 import { Navbar } from "flowbite-react";
 
 const Header = () => {
-
   return (
     <div className="shadow-lg">
-      <Navbar
-        fluid={true}
-        rounded={true}
-
-      >
+      <Navbar fluid={true} rounded={true}>
         <Navbar.Brand>
-          <Link to="/"><p className="ml-4 text-3xl font-bold">e<span className="text-blue-400">Tutor</span></p></Link>
+          <Link to="/">
+            <p className="ml-4 text-3xl font-bold">
+              e<span className="text-blue-400">Tutor</span>
+            </p>
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <li>
             <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/topics">Topics</NavLink>
           </li>
 
           <li>
@@ -29,7 +31,6 @@ const Header = () => {
         </Navbar.Collapse>
       </Navbar>
     </div>
-
   );
 };
 
