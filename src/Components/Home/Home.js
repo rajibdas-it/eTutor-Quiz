@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       {/* banner section */}
-      <section>
+      <section className="sm:mt-9">
         <div className="relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
           <div className="max-w-xl mx-auto lg:max-w-screen-xl">
             <div className="mb-16 lg:max-w-lg lg:mb-0">
