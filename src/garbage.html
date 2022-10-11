@@ -73,3 +73,62 @@
 </section>
 {/* Quiz section */}
 <section></section>
+
+
+question ans <section>
+  <div className="md:w-full">
+    <Card>
+      <div className="mb-4 flex items-center justify-between">
+        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
+          {question}
+        </h5>
+        <a href="/" className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
+          View Answer
+        </a>
+      </div>
+      <div className="flow-root">
+        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+          <li className="py-3 sm:py-4">
+            <div className="flex items-center space-x-4">
+              <div className="min-w-0 flex-1">
+                {
+                options.map(option =>
+                <AnswerOptions option={option} />)
+                }
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </Card>
+  </div>
+</section>
+
+
+
+<!-- my design radio button  -->
+<div className="flex items-center gap-2 border border-gray-700 p-5 rounded-md">
+  <Radio id="united-state" name="countries" value="USA" />
+  <Label htmlFor="united-state">
+    United States
+  </Label>
+</div>
+<div className="flex items-center gap-2 border border-gray-700 p-5 rounded-md">
+  <Radio id="united-state" name="countries" value="USA" />
+  <Label htmlFor="united-state">
+    United States
+  </Label>
+</div>
+<div className="flex items-center gap-2 border border-gray-700 p-5 rounded-md">
+  <Radio id="united-state" name="countries" value="USA" />
+  <Label htmlFor="united-state">
+    United States
+  </Label>
+</div>
+<div className="flex items-center gap-2 border border-gray-700 p-5 rounded-md">
+  <Radio id="united-state" name="countries" value="USA" />
+  <Label htmlFor="united-state">
+    United States
+  </Label>
+</div>

@@ -1,39 +1,32 @@
-import { Card } from 'flowbite-react';
+import { Card, Label, Radio } from 'flowbite-react';
 import React from 'react';
+import AnswerOptions from '../AnswerOptions/AnswerOptions';
 
 const QuizDetails = ({ qs }) => {
+    console.log(qs);
     const { id, question, correctAnswer, options } = qs;
     return (
-        <div className="md:w-full">
-            <Card>
-                <div className="mb-4 flex items-center justify-between">
-                    <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-                        {question}
-                    </h5>
-                    <a
-                        href="/"
-                        className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
-                    >
-                        View Answer
-                    </a>
-                </div>
-                <div className="flow-root">
-                    <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-                        <li className="py-3 sm:py-4">
-                            <div className="flex items-center space-x-4">
+        <Card href="#">
+            <div className='flex flex-row justify-between items-center p-5'>
+                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    Noteworthy technology acquisitions 2021
+                </h5>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
 
-                                <div className="min-w-0 flex-1">
-                                    <p className="truncate text-sm font-medium text-gray-900 dark:text-white">
-                                        Neil Sims
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
+                </button>
+            </div>
+            <div className='grid grid-cols-2 gap-4 shadow-lg p-5'>
+                {
+                    options.map(option => <AnswerOptions></AnswerOptions>)
+                }
 
-                    </ul>
-                </div>
-            </Card>
-        </div>
+            </div>
+
+        </Card>
     );
 };
 
