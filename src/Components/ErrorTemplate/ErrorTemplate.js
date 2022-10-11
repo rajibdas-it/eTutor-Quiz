@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import errorImg from "../../Assets/error.gif";
 
 const ErrorTemplate = () => {
@@ -7,7 +7,7 @@ const ErrorTemplate = () => {
   console.log(error);
   return (
     <div className=" w-[70%] mx-auto">
-      <div className="w-[60%] mx-auto mt-5 text-center">
+      <div className="w-[60%] mx-auto mt-5">
         <img src={errorImg} alt="" />
       </div>
       <div>
@@ -21,6 +21,14 @@ const ErrorTemplate = () => {
             </p>
           </div>
         )}
+      </div>
+
+      <div className="text-center mt-5">
+        <Link to="/">
+          <button className="p-3 bg-blue-400 rounded-md text-white font-bold">
+            Back To Home Page
+          </button>
+        </Link>
       </div>
     </div>
   );
