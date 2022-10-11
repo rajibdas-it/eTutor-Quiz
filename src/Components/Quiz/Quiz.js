@@ -21,20 +21,22 @@ const Quiz = () => {
 
             {/* Quiz Details  */}
             <section className='mt-10 text-center'>
-                <div className='w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4'>
-                    <div className='border border-red-400 md:col-span-2'>
+                <div className='w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4'>
+                    {/* border border-red-400 */}
+                    <div className=' md:col-span-2 shadow-lg'>
                         {
                             questions.map((qs, index) => <QuizDetails key={qs.id} index={index} qs={qs}></QuizDetails>)
                         }
                     </div>
-                    <div className='text-start border border-lime-400'>
-                        <div className='sticky top-0'>
-                            <h1 className='mt-5 text-center text-4xl font-bold text-blue-400 italic mb-2'>Real Time Result Board</h1>
-                            <hr className='bg-black w-[85%] mx-auto' />
+                    {/* border border-lime-400 */}
+                    <div className='text-start shadow-lg'>
+                        <div className='lg:sticky lg:top-0'>
+                            <h1 className='mt-5 text-center text-3xl font-bold text-blue-400 italic mb-4'>Real Time Result</h1>
+                            <hr className='bg-black w-[85%] mx-auto mb-4' />
                         </div>
-                        <div className='mt-5 ml-6 mb-3 sticky top-16'>
-                            <p>Right Ans: {rightAns}</p>
-                            <p>Wrong Ans: {wrongAns}</p>
+                        <div className='ml-8 mb-3 lg:sticky lg:top-16 text-center lg:text-start'>
+                            <p className='text-4xl font-bold mb-10'>Right Ans: <span className='text-lime-500 text-5xl'>{rightAns}</span></p>
+                            <p className='text-4xl font-bold'>Wrong Ans: <span className='text-red-500 text-5xl'>{wrongAns}</span></p>
                         </div>
                     </div>
                 </div>
