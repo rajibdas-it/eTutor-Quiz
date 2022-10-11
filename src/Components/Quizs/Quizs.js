@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Quizs = ({ quiz }) => {
-  console.log(quiz);
   const { id, logo, name, total } = quiz
   return (
     <div className="max-w-sm mt-20">

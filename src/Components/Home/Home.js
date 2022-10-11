@@ -1,14 +1,12 @@
-import { Card } from "flowbite-react";
+
 import React, { useContext } from "react";
 import Lottie from "lottie-react";
-import { Link } from "react-router-dom";
 import banner from '../../Assets/banner.json'
 import { QuizContext } from "../layout/Main";
 import Quizs from "../Quizs/Quizs";
 
 const Home = () => {
   const quizs = useContext(QuizContext);
-  console.log(quizs);
   return (
     <div className="mt-6 w-[80%] mx-auto">
       {/* banner section */}
@@ -29,7 +27,7 @@ const Home = () => {
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {
-            quizs.map(quiz => <Quizs quiz={quiz}></Quizs>)
+            quizs.map(quiz => <Quizs key={quiz.id} quiz={quiz}></Quizs>)
           }
         </div>
       </section>
