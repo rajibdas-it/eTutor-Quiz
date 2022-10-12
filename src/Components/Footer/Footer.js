@@ -38,7 +38,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            href="https://www.instagram.com/ketodietnewsbox/"
+            href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"

@@ -1,9 +1,8 @@
-import { Label, Radio } from 'flowbite-react';
 import React from 'react';
 
 const AnswerOptions = ({ option, qs, handleQuestionAnswer }) => {
     // console.log(qs);
-    const { id, question, correctAnswer, options } = qs;
+    const { question } = qs;
     return (
         // border border - gray - 700 rounded - md handleQuestionAnswer
         <div className="flex items-center gap-2" onChange={(e) => handleQuestionAnswer(e.target.value)}>
