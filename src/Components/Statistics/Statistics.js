@@ -23,7 +23,11 @@ const Statistics = () => {
         Quiz Information Using Chart
       </h1>
       <hr className="w-[70%] mx-auto mb-8" />
-      <div className="grid grid-cols-1 justify-center gap-4">
+      <div
+        className="grid grid-cols-1 justify-center gap-4"
+        data-aos="fade-down"
+        data-aos-easing="linear"
+      >
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
           <div className="m-5">
             <ResponsiveContainer width={320} height={400}>

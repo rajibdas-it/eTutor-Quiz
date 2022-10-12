@@ -3,20 +3,19 @@ import "./App.css";
 import router from "./Utlities/Routes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
-  // const handleToast = () => {
-  //   toast.success("wow so ease!", { autoClose: 1000 });
-  // };
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div>
       <ToastContainer position="top-center" />
       <RouterProvider router={router} />
-      {/* <div>
-        <h1>rajib</h1>
-        <button onClick={handleToast}>Open toast</button>
-      </div> */}
     </div>
   );
 }

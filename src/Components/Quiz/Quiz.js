@@ -23,12 +23,20 @@ const Quiz = () => {
       {/* Quiz Details  */}
       <section className="mt-10 text-center">
         <div className="w-[80%] mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 ">
-          <div className=" md:col-span-2 ">
+          <div
+            className=" md:col-span-2"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
             {questions.map((qs, index) => (
               <QuizDetails key={qs.id} index={index} qs={qs}></QuizDetails>
             ))}
           </div>
-          <div className="text-start shadow-lg">
+          <div
+            className="text-start shadow-lg"
+            data-aos="zoom-in"
+            data-aos-duration="300"
+          >
             <div className="lg:sticky lg:top-0">
               <h1 className="mt-5 text-center text-3xl font-bold text-blue-400 italic mb-4">
                 Real Time Result

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Quizs = ({ quiz }) => {
   const { id, logo, name, total } = quiz;
   return (
-    <div className="max-w-sm mt-20">
+    <div className="max-w-sm mt-20" data-aos="flip-left">
       <Card>
         <div className="bg-gray-400 rounded-md">
           <img src={logo} alt="" />
