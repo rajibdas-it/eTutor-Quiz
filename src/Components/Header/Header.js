@@ -22,11 +22,14 @@ const Header = () => {
             <NavLink to="/topics" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Topics</NavLink>
           </li>
 
-          <li>
+          {/* <li>
             <NavLink to="/blog" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Blog</NavLink>
+          </li> */}
+          <li>
+            <NavLink to="/blogs" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Blogs</NavLink>
           </li>
           <li className="mr-3">
-            <NavLink to="/statistics" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold md:mr-2'}>Statistics</NavLink>
+            <NavLink to="/statistics" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold md:mr-2' : 'text-black font-semibold md:mr-2'}>Statistics</NavLink>
           </li>
         </Navbar.Collapse>
       </Navbar>
