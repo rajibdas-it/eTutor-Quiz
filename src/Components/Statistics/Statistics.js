@@ -4,7 +4,6 @@ import { QuizContext } from "../layout/Main";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   Line,
