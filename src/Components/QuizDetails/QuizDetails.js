@@ -44,7 +44,7 @@ const QuizDetails = ({ qs, index }) => {
           <EyeIcon className="h-6 w-6 text-blue-500" />
         </button>
       </div>
-      <div className="grid grid-cols-2 gap-4 shadow-lg p-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 shadow-lg p-5">
         {options.map((option, index) => (
           <AnswerOptions
             key={index}
