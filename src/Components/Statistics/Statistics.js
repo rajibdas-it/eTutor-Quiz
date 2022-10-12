@@ -27,9 +27,9 @@ const Statistics = () => {
       <div className="grid grid-cols-1 justify-center gap-4">
         <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
           <div className="m-5">
-            <ResponsiveContainer width={400} height={400}>
+            <ResponsiveContainer width={320} height={400}>
               <LineChart
-                width={400}
+                width={320}
                 height={400}
                 data={quizs}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
@@ -53,10 +53,10 @@ const Statistics = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row justify-center items-center">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
           <div className="text-center m-5">
-            <ResponsiveContainer width={400} height={400}>
-              <BarChart width={400} height={400} data={quizs}>
+            <ResponsiveContainer width={320} height={400}>
+              <BarChart width={320} height={400} data={quizs}>
                 <Bar dataKey="total" fill="#8884d8" />
                 <XAxis dataKey="name" />
                 <YAxis dataKey="total" />

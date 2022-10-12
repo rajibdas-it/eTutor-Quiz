@@ -16,17 +16,17 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/home" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/topics">Topics</NavLink>
+            <NavLink to="/topics" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Topics</NavLink>
           </li>
 
           <li>
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/blog" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold'}>Blog</NavLink>
           </li>
-          <li>
-            <NavLink to="/statistics">Statistics</NavLink>
+          <li className="mr-3">
+            <NavLink to="/statistics" className={({ isActive }) => isActive ? 'text-blue-400 font-semibold' : 'text-black font-semibold md:mr-2'}>Statistics</NavLink>
           </li>
         </Navbar.Collapse>
       </Navbar>
