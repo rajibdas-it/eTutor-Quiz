@@ -35,26 +35,28 @@ const QuizDetails = ({ qs, index }) => {
   console.log(wrongAns);
 
   return (
-    <Card>
-      <div className="flex flex-row justify-between items-center p-5 gap-4">
-        <h5 className="text-start text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-          Quiz-{index + 1}. {question.replace(/(<([^>]+)>)/gi, "")}
-        </h5>
-        <button onClick={() => handleShowAns(qs)}>
-          <EyeIcon className="h-6 w-6 text-blue-500" />
-        </button>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 shadow-lg p-5">
-        {options.map((option, index) => (
-          <AnswerOptions
-            key={index}
-            option={option}
-            qs={qs}
-            handleQuestionAnswer={handleQuestionAnswer}
-          ></AnswerOptions>
-        ))}
-      </div>
-    </Card>
+    <div className="mb-5">
+      <Card>
+        <div className="flex flex-row justify-between items-center p-5 gap-4">
+          <h5 className="text-start text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            Quiz-{index + 1}. {question.replace(/(<([^>]+)>)/gi, "")}
+          </h5>
+          <button onClick={() => handleShowAns(qs)}>
+            <EyeIcon className="h-6 w-6 text-blue-500" />
+          </button>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 shadow-lg p-5">
+          {options.map((option, index) => (
+            <AnswerOptions
+              key={index}
+              option={option}
+              qs={qs}
+              handleQuestionAnswer={handleQuestionAnswer}
+            ></AnswerOptions>
+          ))}
+        </div>
+      </Card>
+    </div>
   );
 };
 
